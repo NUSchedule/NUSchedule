@@ -9,33 +9,16 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        //display: 'flex',
-    },
-    toolbar: {
-        //paddingRight: 24, // keep right padding when drawer closed
-    },
-
     title: {
         flexGrow: 1,
     },
-
     appBarSpacer: theme.mixins.toolbar,
     content: {
-        //flexGrow: 1,
-        //height: '100vh',
         overflow: 'auto',
     },
     container: {
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4),
-
-    },
-    paper: {
-        //padding: theme.spacing(2),
-        display: 'flex',
-        overflow: 'auto',
-        flexDirection: 'column',
     },
     calendarBox: {
         height: 470,
@@ -48,9 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     runButton: {
         height: 100,
-    },
-
-
+    }
 }));
 
 export default function MainPage() {
@@ -71,7 +52,6 @@ export default function MainPage() {
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="false" className={classes.container}>
                     <Grid container spacing={4}>
-
                         <Grid item xs={9}>
                             <Grid container spacing = {3}>
                                 {/* Calendar */}
