@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -12,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
-    appBarSpacer: theme.mixins.toolbar,
     content: {
         overflow: 'auto',
     },
@@ -60,19 +56,9 @@ export default function MainPage() {
 
 
     return (
-        <div className={classes.root}>
-            <CssBaseline />
-            <AppBar position="absolute" >
-                <Toolbar className={classes.toolbar}>
-                    <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
-                        NUSchedule
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-
+        <div>
             <main className={classes.content}>
-                <div className={classes.appBarSpacer} />
-                <Container maxWidth="false" className={classes.container}>
+                <Container maxWidth={false} className={classes.container}>
                     <Grid container spacing={4}>
                         <Grid item xs={12} md={9}>
                             <Grid container spacing = {3} direction="column">
